@@ -1,0 +1,8 @@
+{
+  "name": "Bump Node Version Workflow (npm)",
+  "description": "Uses npm to bump Node version in package.json and package-lock.json.",
+  "iconName": "npm",
+  "filePatterns": [
+    "$package-lock.json$"
+  ]
+}

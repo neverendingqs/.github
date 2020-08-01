@@ -1,0 +1,8 @@
+{
+  "name": "Scheduled Node Dependencies Update (npm)",
+  "description": "Uses npm to update dependencies in package.json and package-lock.json.",
+  "iconName": "npm",
+  "filePatterns": [
+    "$package-lock.json$"
+  ]
+}
