@@ -1,0 +1,8 @@
+{
+  "name": "Scheduled Docker Image Deploy",
+  "description": "Scheduled workflow to build and deploy a Docker Image",
+  "iconName": "docker",
+  "filePatterns": [
+    "^Dockerfile*"
+  ]
+}

@@ -1,0 +1,26 @@
+name: Publish to Docker
+
+on:
+  schedule:
+    - cron:  '0 * * * *'
+  workflow_dispatch:
+
+jobs:
+  publish-to-docker:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - run: |
+        git config user.name github-actions[bot]
+        git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+        git commit --allow-empty -m "chore: update image (automated)."
+        git push
+    - uses: docker/build-push-action@v1
+      with:
+        username: neverendingqs
+        password: ${{ secrets.DOCKER_ACCESS_TOKEN }}
+        repository: ${{ env.GITHUB_REPOSITORY }}
+        add_git_labels: true
+        tag_with_ref: true
+        tag_with_sha: true
