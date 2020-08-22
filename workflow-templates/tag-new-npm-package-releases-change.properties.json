@@ -1,0 +1,8 @@
+{
+  "name": "Tag New npm Package Releases",
+  "description": "Creates a new Git tag whenever the npm package version has changed.",
+  "iconName": "npm",
+  "filePatterns": [
+    "^package.json$"
+  ]
+}
